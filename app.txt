@@ -1,0 +1,23 @@
+How to install and use git
+RClick + Open a new folder with powershell
+git config --global user.email "name@email.com"
+git config --global user.name "name"
+
+Open VSC, Terminal
+git init
+git add filename or git add .
+git commit -m "comment/message"
+git status (check what's modified)
+git log --all --oneline (look for any changes, use below instead)
+git difftool (VIM editor 사용, compare current with prev version)
+git remote add origin URL (github or 외부랑 연결)
+git push -u origin main
+
+//push 가 안될경우 error 403 access denied
+open git bash
+cd ~/.ssh
+ssh-keygen -t rsa -C "email@email.com"
+enter(save location) enter enter
+copy SSH / open id_rsa.pub with vscode -> copy ssh
+paste key on github setting -> ssh key
+push again
